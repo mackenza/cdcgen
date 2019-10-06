@@ -1,0 +1,24 @@
+{
+  "name": "cdcgen",
+  "version": "0.0.1",
+  "description": "simple sql gen for cdc demos",
+  "main": "cdcgen.js",
+  "dependencies": {
+    "mssql": "^5.1.0",
+    "sql-bricks": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mackenza/cdcgen.git"
+  },
+  "author": "Andrew MacKenzie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mackenza/cdcgen/issues"
+  },
+  "homepage": "https://github.com/mackenza/cdcgen#readme"
+}
