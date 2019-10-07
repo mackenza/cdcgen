@@ -1,5 +1,6 @@
 const sql = require('mssql');
 const insert = require('sql-bricks').insert;
+require('dotenv').config();
 
 var stocks, cptys;
 const numInserts = process.argv[2];
@@ -11,10 +12,10 @@ function randomInt(max) {
 const getStocks = async () => {
     try {
         const pool = new sql.ConnectionPool({
-            user: 'sa',
-            password: 'Password1',
-            server: 'sqlserver-azure-aus.soldemo.net', 
-            database: 'solace' 
+            user: process.env.DB_USER,
+            password: process.env.DB_PASS,
+            server: process.env.DB_HOST, 
+            database: process.env.DB_NAME 
         });
         await pool.connect();
         const request = new sql.Request(pool);
@@ -30,10 +31,10 @@ const getStocks = async () => {
 const getCptys = async () => {
     try {
         const pool = new sql.ConnectionPool({
-            user: 'sa',
-            password: 'Password1',
-            server: 'sqlserver-azure-aus.soldemo.net', 
-            database: 'solace' 
+            user: process.env.DB_USER,
+            password: process.env.DB_PASS,
+            server: process.env.DB_HOST, 
+            database: process.env.DB_NAME  
         });
         await pool.connect();
         const request = new sql.Request(pool);

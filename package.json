@@ -4,6 +4,7 @@
   "description": "simple sql gen for cdc demos",
   "main": "cdcgen.js",
   "dependencies": {
+    "dotenv": "^8.1.0",
     "mssql": "^5.1.0",
     "sql-bricks": "^2.0.4"
   },
